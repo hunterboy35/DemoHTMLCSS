@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background: #ffffff; */
+  color: black;
+  
+}
+nav {
+  background-color: #1b1b1b;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+nav:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.logo {
+  float: left;
+  color: white;
+  font-size: 27ps;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 1rem;
+}
+nav ul {
+  float: right;
+  margin-right: 40px;
+  position: relative;
+}
+
+nav ul li {
+  /* float: right; */
+  display: inline-block;
+  background-color: black;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 18;
+  padding: 8px 15px;
+}
+
+nav ul li a:hover {
+  color: cyan;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
+}
+nav ul ul li a:hover {
+  color: cyan;
+  box-shadow: none;
+}
+
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul {
+  top: 70px;
+   opacity: 0; 
+  visibility: hidden;
+  position: absolute;
+  transition: top 0.3s;
+}
+nav ul ul li {
+  position: relative;
+  width: 180px;
+  z-index: 100;
+  float: none;
+  display: list-item;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+nav ul ul ul {
+  position: absolute;
+  top: 70px;
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -70px;
+  left: 170px;
+  display: list-item;
+}
+nav ul ul ul ul {
+  top: 70px;
+}
+nav ul ul ul ul li {
+  position: relative;
+  top: -290px;
+  left: 170px;
+  display: list-item;
+}
+
+.advertisement{
+    height: 15rem;
+    float: left;
+    /* width: auto; */
+    max-width: 0px;
+    margin-left: 3rem;
+    /* margin-top: -26rem; */
+}
+
+
+.show, input{
+  display: none;
+
+}
+  /* Responsive Menu Bar  */
+@media screen and (max-width: 980px){
+
+  .vertical-scrool{
+    overflow-y: auto;
+    width: 20rem;
+    height: 40rem;
+  }
+.carousel{
+  margin-top: 0.1rem;
+}
+.header{
+  height: 4.6rem;
+  background-color: black;
+  position: static;
+  width: 100%;
+} 
+.pos-fixed{
+  position: absolute;
+}
+
+nav ul{
+  margin-right: auto;
+  float: left;
+  
+}
+ .logo{
+  display: inline-block;
+  padding-left: 25%;
+ }
+ 
+nav ul li, nav ul ul li, nav ul ul ul li, nav ul ul ul ul li{
+  display: block;
+  width: 100%;
+  float: left;
+  text-align: left;
+  box-shadow: cyan;
+  top: 0;
+  left: 0;
+  display: list-item;
+}
+nav ul ul, nav ul ul ul, nav ul ul ul ul{
+  top: 2rem;
+  position: static;
+  border-top: none;
+  float: none;
+  display: none;
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+ nav ul ul li{
+   border-bottom: 0;
+ }
+nav ul ul ul li{
+position: static;
+display: block;
+}
+
+nav ul ul a{
+  padding-left: 2rem;
+}
+nav ul ul ul a{
+  padding-left: 3rem;
+}
+.show{
+  display: block;
+  color: white;
+  font-size: 1rem;
+  padding: 0 1rem; 
+  line-height: 2.6rem;
+  cursor: pointer;
+}
+nav ul li a:hover{
+  box-shadow: none;
+
+}
+.show:hover{
+color: cyan;
+}
+ .icon{
+  display: block;
+  color: white;
+  position: static;
+  /* right: 2rem; */
+  line-height: 2rem;
+  font-size: 25px;
+  cursor: pointer;
+  /* float: right; */
+  padding-left: 0;
+  height: 100%;
+
+}
+.show +a, ul{
+  display: none;
+}
+[id^=btn]:checked + ul{
+  display: block;
+}
+.fa {
+  float: left; 
+  display: inline-block;
+  font: normal normal normal 1rem/1 FontAwesome;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
+  /* margin-right: 1rem; */
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+nav:after {
+  content: "";
+  /* clear: both; */
+   display: table; 
+   position: fixed;
+}
+ 
+
+
+.carousel{
+  /* margin-top: 0rem; */
+  /* margin-right: 28rem; */
+  height: 12rem;
+  /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+  /* margin-left: 20px; */
+  /* filter: drop-shadow(0 0 10px #0003); */
+  perspective: 100px;
+}
+.carousel::before, .carousel::after, .carousel__prev, .carousel__next {
+  position: absolute;
+  /* top: 0; */
+  width: 3rem;
+  /* height: 3rem; */
+  margin-top: 60.5%;
+  font-size: 0px;
+  text-align: center;
+  outline: 0;
+}
+  
+}
+
+
+
+
+/* carousel CSS  */
+@keyframes tonext {
+    100% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+   @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+    
+  } 
+  
+
+  
+  * {
+    box-sizing: border-box;
+    scrollbar-color: transparent ; 
+    scrollbar-width: 0px;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+  }
+  
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel {
+    /* margin-top: 0rem; */
+    /* margin-right:   28rem; */
+     height: 30rem;
+    /* max-width: 1000px; */
+    position: relative;
+    margin: auto;
+    margin-left: 0;
+    /* filter: drop-shadow(0 0 10px #0003);  */
+    perspective: 100px;
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  .slide_img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+  }
+  
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    /* background-color: #f99; */
+    /* background-image: url(/images/img1.png); */
+    counter-increment: item;
+  }
+  
+  .carousel__slide:nth-child(even) {
+    background-color: #99f;
+  }
+  
+  /* .carousel__slide:before {
+    /* content: counter(item); */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-40%,70px);
+    color: #fff;
+    font-size: 2em;
+  } */ 
+  
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4000s;
+       animation-iteration-count: infinite; 
+    }
+  
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  /* @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  } */
+  
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+ 
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 17.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+  }
+  
+  .carousel::before,
+  .carousel__prev {
+    left: 3rem;
+  }
+  
+  .carousel::after,
+  .carousel__next {
+    right: 3rem;
+  }
+  
+  .carousel::before,
+  .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: transparent;
+    background-size: 2.5rem 2.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  .carousel::before {
+    background-image: url("/imeges/prev.png");
+
+  }
+  
+  .carousel::after {
+ background-image: url("/imeges/next.png");
+  }
+
+
+  .chatbox{
+    position: fixed;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+    z-index: 10000;
+
+  }
+  .chat-svg{
+    height: 4rem;
+    float: right;
+  }
+  
+
+
+  
+  

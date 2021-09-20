@@ -411,7 +411,7 @@ nav:after {
     .carousel__snapper {
       animation-name: tonext, snap;
       animation-timing-function: ease;
-      animation-duration: 4000s;
+      animation-duration: 5s;
        animation-iteration-count: infinite; 
     }
   
@@ -472,12 +472,12 @@ nav:after {
   }
   
   .carousel::before {
-    background-image: url("/imeges/prev.png");
+    background-image: url("imeges/prev.png");
 
   }
   
   .carousel::after {
- background-image: url("/imeges/next.png");
+ background-image: url("imeges/next.png");
   }
 
 

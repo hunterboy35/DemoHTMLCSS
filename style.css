@@ -114,7 +114,7 @@ nav ul ul ul ul li {
 }
 
 
-.show, input{
+.show, input, .icon{
   display: none;
 
 }
@@ -260,7 +260,9 @@ nav:after {
   text-align: center;
   outline: 0;
 }
-  
+
+
+
 }
 
 
@@ -411,7 +413,7 @@ nav:after {
     .carousel__snapper {
       animation-name: tonext, snap;
       animation-timing-function: ease;
-      animation-duration: 5s;
+      animation-duration: 4000s;
        animation-iteration-count: infinite; 
     }
   
@@ -472,12 +474,12 @@ nav:after {
   }
   
   .carousel::before {
-    background-image: url("imeges/prev.png");
+    background-image: url("/imeges/prev.png");
 
   }
   
   .carousel::after {
- background-image: url("imeges/next.png");
+ background-image: url("/imeges/next.png");
   }
 
 
@@ -494,7 +496,81 @@ nav:after {
     float: right;
   }
   
+ /* Container section */
+
+ .container{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 15px;
+ }
 
 
+ .content{
+   /* height: 300px; */
+   /* width: 500px; */
+   float: left;
+   position: relative;
+   background-color: aquamarine;
+   margin: 20px;
+   /* align-items: flex-start; */
+
+ }
+ 
+ .sidecontent{
+  height: 300px;
+  width: 200px;
+  float: left;
+  position: relative;
+  background-color: aquamarine;
+  margin: 20px;
+  /* align-items: flex-start; */
+
+}
+ 
+ .Feature{
+  height: 36px;
+  margin-left: 18px;
+  text-align: center;
+  width: fit-content;
+
+ }
+
+ .btncard{
+  height: 20%;
+  width: 48%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+ }
+
+ .btnbuy{
+  height: 20%;
+    width: 48%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
   
+ button:hover {
+  color: cyan;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
+}
+ 
+.chat-svg:hover {
+  color: cyan;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
+}
   
